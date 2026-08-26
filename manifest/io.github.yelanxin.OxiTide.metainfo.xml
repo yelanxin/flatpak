@@ -84,6 +84,12 @@
   </requires>
 
   <releases>
+    <release version="0.1.5" date="2026-08-26">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.5</url>
+      <description>
+        <p>One-click USB authorization in the Flatpak build: the permission dialog installs the udev rule for you via a polkit password prompt and retries automatically. Fixed the output-device selection resetting to default (and playback staying silent) after authorizing a DAC.</p>
+      </description>
+    </release>
     <release version="0.1.4" date="2026-08-24">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.4</url>
       <description>
