@@ -1,0 +1,7 @@
+[Flatpak Repo]
+Title=OxiTide
+Url=@BASEURL@/repo/
+Homepage=https://github.com/yelanxin/OxiTide
+Comment=Official OxiTide Flatpak repository
+Description=Official Flatpak repository for OxiTide, the Hi-Res TIDAL player for Linux
+GPGKey=@GPGKEY@

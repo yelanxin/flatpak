@@ -1,0 +1,10 @@
+[Flatpak Ref]
+Name=io.github.yelanxin.OxiTide
+Branch=stable
+Title=OxiTide
+Url=@BASEURL@/repo/
+SuggestRemoteName=oxitide
+Homepage=https://github.com/yelanxin/OxiTide
+IsRuntime=false
+RuntimeRepo=https://dl.flathub.org/repo/flathub.flatpakrepo
+GPGKey=@GPGKEY@

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.yelanxin.OxiTide</id>
+
+  <name>OxiTide</name>
+  <summary>High-resolution TIDAL player with bit-perfect playback</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=https://github.com/yelanxin/OxiTide/blob/main/LICENSE</project_license>
+
+  <developer id="io.github.yelanxin">
+    <name>Eason Ye</name>
+  </developer>
+
+  <description>
+    <p>
+      OxiTide is a native TIDAL desktop client for Linux, written entirely in
+      Rust and built on GTK 4 / libadwaita. It streams Hi-Res and FLAC audio
+      gaplessly and keeps the signal bit-perfect all the way to the output.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Gapless Hi-Res / FLAC streaming with per-track sample-rate switching</li>
+      <li>Optional DSP chain: parametric EQ, convolution, tape and tube colour, stereo widener, limiter, resampler</li>
+      <li>Spectrum visualizer (bars, mirror, scope and more), live LUFS and dynamic-range meter</li>
+      <li>Synced lyrics drawer, queue drawer, Now Playing view</li>
+      <li>MPRIS media keys, Last.fm / ListenBrainz scrobbling, remote-control API</li>
+    </ul>
+    <p>
+      USB Rawlink (direct USB passthrough to a DAC) needs your user to be
+      allowed to open the DAC's USB device. The native packages install a udev
+      rule for that; in the Flatpak the app shows the one-line command to
+      install the same rule on your system the first time it is needed.
+    </p>
+    <p>A TIDAL subscription is required. OxiTide is an independent project and is not affiliated with or endorsed by TIDAL.</p>
+  </description>
+
+  <launchable type="desktop-id">io.github.yelanxin.OxiTide.desktop</launchable>
+
+  <url type="homepage">https://github.com/yelanxin/OxiTide</url>
+  <url type="bugtracker">https://github.com/yelanxin/OxiTide/issues</url>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#c98d4b</color>
+    <color type="primary" scheme_preference="dark">#503a22</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/yelanxin/OxiTide/main/screenshots/01-home.png</image>
+      <caption>Home: custom mixes with the collapsed play bar</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yelanxin/OxiTide/main/screenshots/02-new.png</image>
+      <caption>New arrivals</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yelanxin/OxiTide/main/screenshots/03-top.png</image>
+      <caption>Top playlists, tracks, albums and artists</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yelanxin/OxiTide/main/screenshots/04-hires.png</image>
+      <caption>Hi-Res headphone classics and classic albums</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yelanxin/OxiTide/main/screenshots/05-lyrics.png</image>
+      <caption>Synced lyrics drawer with the full play bar and stream info</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yelanxin/OxiTide/main/screenshots/06-visualizer.png</image>
+      <caption>Spectrum visualizer over the library</caption>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+  <requires>
+    <display_length compare="ge">768</display_length>
+    <internet>always</internet>
+  </requires>
+
+  <releases>
+    <release version="0.1.4" date="2026-08-24">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.4</url>
+      <description>
+        <p>Now-playing indicator on Home page track cards: the playing track's cover shows a live five-bar glyph.</p>
+      </description>
+    </release>
+    <release version="0.1.3" date="2026-08-23">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.3</url>
+      <description>
+        <p>Persistent per-DAC clock calibration with a learned-clocks table in settings. Fixed hardware-volume DACs playing quiet: the software volume stage is removed from the audio chain when the DAC's hardware volume is in control.</p>
+      </description>
+    </release>
+    <release version="0.1.2" date="2026-08-23">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.2</url>
+      <description>
+        <p>New app icon and store branding.</p>
+      </description>
+    </release>
+    <release version="0.1.1" date="2026-08-23">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.1</url>
+      <description>
+        <p>USB Rawlink: freshly plugged DACs are authorized reliably (udev rule ordering). Flatpak support with guided host udev-rule setup. Single USB authorization dialog.</p>
+      </description>
+    </release>
+    <release version="0.1.0" date="2026-08-23">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.0</url>
+      <description>
+        <p>First stable release: lyrics drawer, floating collapsible play bar with a stream-info display, instant pause/resume, visualizer modes incl. scope.</p>
+      </description>
+    </release>
+  </releases>
+</component>
