@@ -2,7 +2,7 @@
 Name=io.github.yelanxin.OxiTide
 Branch=stable
 Title=OxiTide
-Url=https://yelanxin.github.io/flatpak/repo/
+Url=https://flatpak.oxitide.com/repo/
 SuggestRemoteName=oxitide
 Homepage=https://github.com/yelanxin/OxiTide
 IsRuntime=false

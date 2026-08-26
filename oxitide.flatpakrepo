@@ -1,6 +1,6 @@
 [Flatpak Repo]
 Title=OxiTide
-Url=https://yelanxin.github.io/flatpak/repo/
+Url=https://flatpak.oxitide.com/repo/
 Homepage=https://github.com/yelanxin/OxiTide
 Comment=Official OxiTide Flatpak repository
 Description=Official Flatpak repository for OxiTide, the Hi-Res TIDAL player for Linux
