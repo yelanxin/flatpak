@@ -35,6 +35,12 @@ finish-args:
   - --share=network
   # MPRIS / media keys
   - --own-name=org.mpris.MediaPlayer2.oxitide
+  # One-click USB authorization: run `pkexec` on the host via
+  # `flatpak-spawn --host` to install the udev uaccess rule (polkit
+  # password prompt). Without this the app falls back to showing the
+  # manual command. Not acceptable on Flathub (sandbox escape) — this
+  # manifest targets the self-hosted repo.
+  - --talk-name=org.freedesktop.Flatpak
   # ALSA direct output takes the sound card exclusively through the
   # freedesktop ReserveDevice1 protocol: own the per-card name
   # (org.freedesktop.ReserveDevice1.Audio<card index>) and ask the
