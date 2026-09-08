@@ -84,6 +84,13 @@
   </requires>
 
   <releases>
+    <release version="0.1.8" date="2026-09-07">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.8</url>
+      <description>
+        <p>PipeWire is now the default output driver, so playback shares the system mixer; exclusive, bit-perfect output stays available through ALSA or USB Rawlink. The interface ships its own icon theme and renders the same on every desktop.</p>
+        <p>Fixed: no sound at all on a fresh install; memory growing by about a gigabyte a minute while browsing, caused by cover art decoded at full resolution and never released; liked tracks, albums and artists stopping at the first page; the tray icon staying invisible on KDE; and sign-in failing on systems without gst-plugins-good.</p>
+      </description>
+    </release>
     <release version="0.1.5" date="2026-08-26">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.5</url>
       <description>
