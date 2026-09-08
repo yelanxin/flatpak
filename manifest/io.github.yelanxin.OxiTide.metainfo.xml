@@ -84,6 +84,13 @@
   </requires>
 
   <releases>
+    <release version="0.1.9" date="2026-09-08">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.9</url>
+      <description>
+        <p>The sidebar collapses to icons only with a toggle at the foot of the nav column, and the state is remembered across restarts.</p>
+        <p>The play bar no longer reaches across the sidebar, and its cover art is decoded at the display's real resolution instead of a fixed 80 pixels.</p>
+      </description>
+    </release>
     <release version="0.1.8" date="2026-09-07">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.8</url>
       <description>
