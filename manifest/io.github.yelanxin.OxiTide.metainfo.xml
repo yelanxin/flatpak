@@ -84,6 +84,13 @@
   </requires>
 
   <releases>
+    <release version="0.1.11" date="2026-09-14">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.11</url>
+      <description>
+        <p>Cover grids fit the window, search results open collapsed, and the Tracks page gains Add to Playlist and queue actions. Your TIDAL profile picture shows as the avatar.</p>
+        <p>Add to Playlist now lists playlists inside folders, Check for Updates only offers Linux releases, and a new version takes over from one still running in the tray.</p>
+      </description>
+    </release>
     <release version="0.1.10" date="2026-09-11">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.10</url>
       <description>
