@@ -84,6 +84,13 @@
   </requires>
 
   <releases>
+    <release version="0.1.12" date="2026-09-16">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.12</url>
+      <description>
+        <p>The desktop draws the title bar: OxiTide's windows are decorated by the compositor, so they match the rest of KDE or GNOME. Search moved into the sidebar, and the play bar, tech pill and settings tabs restyle for a light system theme.</p>
+        <p>The sidebar and play-bar collapse toggles share one chevron at one size.</p>
+      </description>
+    </release>
     <release version="0.1.11" date="2026-09-14">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.11</url>
       <description>
