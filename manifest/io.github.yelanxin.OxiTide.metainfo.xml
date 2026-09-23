@@ -84,6 +84,13 @@
   </requires>
 
   <releases>
+    <release version="0.1.14" date="2026-09-23">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.14</url>
+      <description>
+        <p>Every track's menu offers Go to Album and Go to Artist, History's track rows get the menu too (a button or a right click), and album, playlist and mix rows show each track's cover with its number on the corner.</p>
+        <p>Cards lift on hover over a soft shadow, the Playlists page drops its header for floating tools, Community links to r/OxiTide, and leaving mini mode restores the window's size.</p>
+      </description>
+    </release>
     <release version="0.1.12" date="2026-09-16">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.12</url>
       <description>
