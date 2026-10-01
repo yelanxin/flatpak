@@ -3,7 +3,7 @@
   <id>io.github.yelanxin.OxiTide</id>
 
   <name>OxiTide</name>
-  <summary>High-resolution TIDAL player with bit-perfect playback</summary>
+  <summary>Hi-Res TIDAL and local music player with bit-perfect playback</summary>
 
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary=https://github.com/yelanxin/OxiTide/blob/main/LICENSE</project_license>
@@ -17,10 +17,12 @@
       OxiTide is a native TIDAL desktop client for Linux, written entirely in
       Rust and built on GTK 4 / libadwaita. It streams Hi-Res and FLAC audio
       gaplessly and keeps the signal bit-perfect all the way to the output.
+      It also plays your own music folders through the same engine.
     </p>
     <p>Features:</p>
     <ul>
       <li>Gapless Hi-Res / FLAC streaming with per-track sample-rate switching</li>
+      <li>Local music: FLAC, APE, WAV, AIFF, ALAC, AAC, MP3 and Ogg Vorbis, CUE sheets, tag editing and cover download</li>
       <li>Optional DSP chain: parametric EQ, convolution, tape and tube colour, stereo widener, limiter, resampler</li>
       <li>Spectrum visualizer (bars, mirror, scope and more), live LUFS and dynamic-range meter</li>
       <li>Synced lyrics drawer, queue drawer, Now Playing view</li>
@@ -32,7 +34,7 @@
       rule for that; in the Flatpak the app shows the one-line command to
       install the same rule on your system the first time it is needed.
     </p>
-    <p>A TIDAL subscription is required. OxiTide is an independent project and is not affiliated with or endorsed by TIDAL.</p>
+    <p>Streaming needs a TIDAL subscription; local music does not. OxiTide is an independent project and is not affiliated with or endorsed by TIDAL.</p>
   </description>
 
   <launchable type="desktop-id">io.github.yelanxin.OxiTide.desktop</launchable>
@@ -84,6 +86,13 @@
   </requires>
 
   <releases>
+    <release version="0.2.1" date="2026-09-30">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.1</url>
+      <description>
+        <p>Local music: play your own folders alongside TIDAL through the same bit-perfect engine. FLAC, APE, WAV, AIFF, ALAC, AAC, MP3 and Ogg Vorbis, with CUE sheets, and a library that looks like TIDAL's.</p>
+        <p>Browse Files shows your folders, edits tags (one file or many, CUE sheets included) and moves files to the Trash. Album covers and artist pictures can be downloaded automatically or picked online, and local music keeps its own History.</p>
+      </description>
+    </release>
     <release version="0.1.14" date="2026-09-23">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.1.14</url>
       <description>

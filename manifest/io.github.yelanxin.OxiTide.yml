@@ -33,6 +33,14 @@ finish-args:
   - --device=all
   # TIDAL streaming + sign-in
   - --share=network
+  # Local music folders: the Music folder and external drives directly;
+  # any other folder the user adds comes through the file chooser portal
+  # (a document-portal path that persists across runs). Read-write:
+  # Browse Files edits tags / CUE sheets and moves files to the Trash.
+  - --filesystem=xdg-music
+  - --filesystem=/media
+  - --filesystem=/run/media
+  - --filesystem=/mnt
   # MPRIS / media keys
   - --own-name=org.mpris.MediaPlayer2.oxitide
   # One-click USB authorization: run `pkexec` on the host via
@@ -88,9 +96,9 @@ modules:
       - type: extra-data
         filename: oxitide.deb
         only-arches: [x86_64]
-        url: https://github.com/yelanxin/OxiTide/releases/download/v0.1.14/oxitide_0.1.14_amd64_ubuntu2404.deb
-        sha256: b1ec30426ac9a14b7174b53e5759332b1c96ffd10637777e8ea5df1702391ee0
-        size: 12226748
+        url: https://github.com/yelanxin/OxiTide/releases/download/v0.2.1/oxitide_0.2.1_amd64_ubuntu2404.deb
+        sha256: cc51ad194dff327af1f84f454ff2760380da17e758cdd6535f45af2320a2b591
+        size: 13974522
         # flatpak-external-data-checker: follow the latest GitHub release
         # and rewrite url / sha256 / size (+ metainfo release entry).
         x-checker-data:
