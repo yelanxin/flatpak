@@ -86,6 +86,13 @@
   </requires>
 
   <releases>
+    <release version="0.2.2" date="2026-10-15">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.2</url>
+      <description>
+        <p>Local music gains Favorites tabs that work like the library pages, nested playlist folders, custom playlist covers, and a Browse Files that opens in browse mode with a Select button. A new setting decides whether closing the window quits or keeps OxiTide running.</p>
+        <p>Large playlists no longer freeze the window: they show 100 tracks a page and fill in covers as they arrive.</p>
+      </description>
+    </release>
     <release version="0.2.1" date="2026-09-30">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.1</url>
       <description>
