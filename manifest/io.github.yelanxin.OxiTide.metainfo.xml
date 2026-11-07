@@ -86,6 +86,13 @@
   </requires>
 
   <releases>
+    <release version="0.2.3" date="2026-11-07">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.3</url>
+      <description>
+        <p>Back and forward through pages with the mouse's side buttons or Alt+Left and Alt+Right. The Tracks page sorts by when you hearted a track, as the TIDAL apps do, and rows can be removed from your own playlists. PipeWire users get an output device picker and Bluetooth codec settings.</p>
+        <p>Seeking on USB Rawlink devices and in WAV, FLAC and APE files is fixed, and packed 24-bit and 16-bit outputs are bit-perfect again.</p>
+      </description>
+    </release>
     <release version="0.2.2" date="2026-10-15">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.2</url>
       <description>

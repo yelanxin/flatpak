@@ -96,9 +96,9 @@ modules:
       - type: extra-data
         filename: oxitide.deb
         only-arches: [x86_64]
-        url: https://github.com/yelanxin/OxiTide/releases/download/v0.2.2/oxitide_0.2.2_amd64_ubuntu2404.deb
-        sha256: 86937d3c48a00821bf3c7b7d118312d461af71d89c05da831539bce43ff15d29
-        size: 14035162
+        url: https://github.com/yelanxin/OxiTide/releases/download/v0.2.3/oxitide_0.2.3_amd64_ubuntu2404.deb
+        sha256: 874111760e6a731b7ffc1dcb03cdffd3709f99ce5bac5ec88d96289720dc43ab
+        size: 14092726
         # flatpak-external-data-checker: follow the latest GitHub release
         # and rewrite url / sha256 / size (+ metainfo release entry).
         x-checker-data:
