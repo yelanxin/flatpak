@@ -86,6 +86,13 @@
   </requires>
 
   <releases>
+    <release version="0.2.4" date="2026-11-19">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.4</url>
+      <description>
+        <p>BT Rawlink, a new output driver for Bluetooth headphones: the player encodes the audio itself (LDAC, aptX HD, aptX, AAC, Opus, SBC-XQ or SBC) at each track's sample rate, with no system mixer in between, and sets the level on the headphones.</p>
+        <p>The volume is remembered per output, ALSA hardware volume reaches 0 dB, and the PipeWire driver plays in the Flatpak.</p>
+      </description>
+    </release>
     <release version="0.2.3" date="2026-11-07">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.3</url>
       <description>

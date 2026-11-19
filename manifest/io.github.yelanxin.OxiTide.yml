@@ -31,6 +31,11 @@ finish-args:
   # (/dev/bus/usb). The app has no PulseAudio/PipeWire backend, so a
   # socket is not enough.
   - --device=all
+  # The shared PipeWire driver (the default): PipeWire's own socket, for
+  # the `pipewire` ALSA PCM the driver opens and for `pw-dump`, which
+  # lists the sinks in the device picker. Without it the driver cannot
+  # open its output at all inside the sandbox.
+  - --filesystem=xdg-run/pipewire-0
   # TIDAL streaming + sign-in
   - --share=network
   # Local music folders: the Music folder and external drives directly;
@@ -57,6 +62,13 @@ finish-args:
   # (OWN includes TALK; listing both would downgrade the policy to the
   # last entry.)
   - --own-name=org.freedesktop.ReserveDevice1.*
+  # BT Rawlink: the player as the A2DP source. It registers media
+  # endpoints with BlueZ on the system bus and takes the transport socket
+  # from it. Keeping WirePlumber off Bluetooth meanwhile (a drop-in in the
+  # user's WirePlumber configuration and a restart of the user service)
+  # goes through `flatpak-spawn --host`, on the org.freedesktop.Flatpak
+  # permission above.
+  - --system-talk-name=org.bluez
   # System tray (StatusNotifier)
   - --talk-name=org.kde.StatusNotifierWatcher
   # Inhibit suspend while playing
@@ -64,6 +76,43 @@ finish-args:
   - --talk-name=org.gnome.SessionManager
 
 modules:
+  # Bluetooth encoders for BT Rawlink. The player loads them at run time
+  # from /app/lib and offers only the codecs it finds; the GNOME runtime
+  # carries none of these (it does have libopus).
+  - name: sbc
+    buildsystem: autotools
+    config-opts: [--disable-tester, --disable-tools, --disable-static]
+    cleanup: [/include, /lib/pkgconfig, '*.la']
+    sources:
+      - type: archive
+        url: https://www.kernel.org/pub/linux/bluetooth/sbc-2.1.tar.xz
+        sha256: 426633cabd7c798236443516dfa8335b47e004b0ef37ff107e0c7ead3299fcc2
+  - name: ldacBT
+    buildsystem: cmake-ninja
+    config-opts: [-DCMAKE_BUILD_TYPE=Release, -DINSTALL_LIBDIR=/app/lib, -DCMAKE_POLICY_VERSION_MINIMUM=3.5]
+    cleanup: [/include, /lib/pkgconfig]
+    sources:
+      - type: archive
+        url: https://github.com/EHfive/ldacBT/releases/download/v2.0.2.3/ldacBT-2.0.2.3.tar.gz
+        sha256: 4bd8eece78bb5c1361fab95743e7100506e2408a25c4a592a0f8d349746dc5b4
+  - name: libfreeaptx
+    buildsystem: simple
+    build-commands:
+      - make -j${FLATPAK_BUILDER_N_JOBS} CC="gcc -std=c99" PREFIX=/app LIBDIR=lib
+      - make CC="gcc -std=c99" PREFIX=/app LIBDIR=lib install
+    cleanup: [/include, /lib/pkgconfig, /bin, '*.a']
+    sources:
+      - type: archive
+        url: https://github.com/regularhunter/libfreeaptx/archive/refs/tags/0.2.2.tar.gz
+        sha256: 5ab5ebddf3f2eb7ce47a505b87460b00fc1ede99c70010796d3575ab31ea80bf
+  - name: fdk-aac
+    buildsystem: cmake-ninja
+    config-opts: [-DCMAKE_BUILD_TYPE=Release, -DBUILD_SHARED_LIBS=ON, -DBUILD_PROGRAMS=OFF]
+    cleanup: [/include, /lib/pkgconfig, /lib/cmake]
+    sources:
+      - type: archive
+        url: https://github.com/mstorsjo/fdk-aac/archive/refs/tags/v2.0.3.tar.gz
+        sha256: e25671cd96b10bad896aa42ab91a695a9e573395262baed4e4a2ff178d6a3a78
   - name: oxitide
     buildsystem: simple
     build-commands:
@@ -96,9 +145,9 @@ modules:
       - type: extra-data
         filename: oxitide.deb
         only-arches: [x86_64]
-        url: https://github.com/yelanxin/OxiTide/releases/download/v0.2.3/oxitide_0.2.3_amd64_ubuntu2404.deb
-        sha256: 874111760e6a731b7ffc1dcb03cdffd3709f99ce5bac5ec88d96289720dc43ab
-        size: 14092726
+        url: https://github.com/yelanxin/OxiTide/releases/download/v0.2.4/oxitide_0.2.4_amd64_ubuntu2404.deb
+        sha256: 15de88dff4a52ab534748af1da31e54df343ed4d635ea79407638e5e78991655
+        size: 14291730
         # flatpak-external-data-checker: follow the latest GitHub release
         # and rewrite url / sha256 / size (+ metainfo release entry).
         x-checker-data:
