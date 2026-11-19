@@ -86,6 +86,12 @@
   </requires>
 
   <releases>
+    <release version="0.2.4.1" date="2026-11-19">
+      <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.4.1</url>
+      <description>
+        <p>BT Rawlink: the progress bar restarts with each track instead of counting on from the previous one.</p>
+      </description>
+    </release>
     <release version="0.2.4" date="2026-11-19">
       <url>https://github.com/yelanxin/OxiTide/releases/tag/v0.2.4</url>
       <description>
